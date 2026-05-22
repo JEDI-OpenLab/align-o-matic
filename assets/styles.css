@@ -1137,6 +1137,12 @@ a:focus {
   gap: 1rem;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .footer a {
   color: #fff;
 }

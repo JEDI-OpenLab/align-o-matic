@@ -45,6 +45,7 @@ La section bibliographique n'est pas intégrée pour le moment. Elle pourra êtr
 
 ```text
 align-o-matic/
+|-- LICENSE.md
 |-- README.md
 |-- index.html
 `-- assets/
@@ -74,6 +75,14 @@ http://127.0.0.1:48321/align-o-matic/
 - Modifier les niveaux de Bloom, verbes, exemples, matrices et checklist dans `assets/app.js`.
 - Modifier la mise en page et les composants visuels dans `assets/styles.css`.
 - Ajouter de nouvelles aides contextuelles avec un bouton portant les attributs `data-help-title` et `data-help-body`.
+
+## Licence
+
+Le code et les contenus pédagogiques propres à `align-o-matic` sont placés sous licence CC0 1.0 Universal, avec l'identifiant SPDX `CC0-1.0`.
+
+Cela signifie que l'application peut être copiée, modifiée, adaptée, partagée et réutilisée, y compris dans un cadre commercial, sans demander d'autorisation.
+
+Voir [LICENSE.md](LICENSE.md).
 
 ## Pistes d'évolution
 
