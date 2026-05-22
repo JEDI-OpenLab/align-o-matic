@@ -476,7 +476,7 @@ const bindEvents = () => {
   copyObjective.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(objectiveOutput.textContent);
-      copyObjective.textContent = "Copie";
+      copyObjective.textContent = "Copié";
       window.setTimeout(() => {
         copyObjective.textContent = "Copier";
       }, 1400);
@@ -506,8 +506,50 @@ const bindEvents = () => {
   });
 };
 
+const initContextHelp = () => {
+  const helpPanel = document.querySelector("#contextHelp");
+  if (!helpPanel) return;
+
+  const helpTitle = document.querySelector("#contextHelpTitle");
+  const helpBody = document.querySelector("#contextHelpBody");
+  const closeButton = helpPanel.querySelector(".context-help-close");
+  let activeButton = null;
+
+  const closeHelp = () => {
+    const buttonToRestore = activeButton;
+    helpPanel.hidden = true;
+    if (buttonToRestore) buttonToRestore.setAttribute("aria-expanded", "false");
+    activeButton = null;
+    if (buttonToRestore) buttonToRestore.focus({ preventScroll: true });
+  };
+
+  document.querySelectorAll(".help-button[data-help-title]").forEach((button) => {
+    button.setAttribute("aria-expanded", "false");
+    button.addEventListener("click", () => {
+      if (activeButton && activeButton !== button) {
+        activeButton.setAttribute("aria-expanded", "false");
+      }
+      activeButton = button;
+      helpTitle.textContent = button.dataset.helpTitle;
+      helpBody.textContent = button.dataset.helpBody;
+      helpPanel.hidden = false;
+      button.setAttribute("aria-expanded", "true");
+      closeButton.focus({ preventScroll: true });
+    });
+  });
+
+  closeButton.addEventListener("click", closeHelp);
+  helpPanel.addEventListener("click", (event) => {
+    if (event.target === helpPanel) closeHelp();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !helpPanel.hidden) closeHelp();
+  });
+};
+
 renderSelects();
 renderBloom();
 renderMatrix();
 renderChecklist();
 bindEvents();
+initContextHelp();

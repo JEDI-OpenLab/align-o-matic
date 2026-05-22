@@ -54,26 +54,73 @@
 
           <section class="generator-panel" aria-labelledby="generateur-titre">
             <div class="panel-heading">
-              <p class="kicker">Générateur rapide</p>
-              <h2 id="generateur-titre">Rédiger un objectif</h2>
+              <div>
+                <p class="kicker">Générateur rapide</p>
+                <div class="heading-with-help">
+                  <h2 id="generateur-titre">Rédiger un objectif</h2>
+                  <button
+                    class="help-button"
+                    type="button"
+                    aria-label="Aide : rédiger un objectif"
+                    data-help-title="Rédiger un objectif"
+                    data-help-body="Utilisez ce générateur comme un brouillon : choisissez le niveau de complexité, puis ajustez le verbe, l'objet et le contexte jusqu'à obtenir une phrase observable, enseignable et évaluable."
+                  >?</button>
+                </div>
+              </div>
             </div>
             <form class="objective-form" aria-describedby="generateur-aide">
-              <label>
-                Niveau de Bloom
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="levelSelect">Niveau de Bloom</label>
+                  <button
+                    class="help-button"
+                    type="button"
+                    aria-label="Aide : niveau de Bloom"
+                    data-help-title="Niveau de Bloom"
+                    data-help-body="Le niveau de Bloom indique la complexité cognitive attendue. Il évite de demander aux étudiants de créer, analyser ou évaluer si les activités ne les ont entraînés qu'à mémoriser."
+                  >?</button>
+                </div>
                 <select id="levelSelect"></select>
-              </label>
-              <label>
-                Verbe d'action
+              </div>
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="verbSelect">Verbe d'action</label>
+                  <button
+                    class="help-button"
+                    type="button"
+                    aria-label="Aide : verbe d'action"
+                    data-help-title="Verbe d'action"
+                    data-help-body="Un bon verbe décrit une action observable : expliquer, appliquer, analyser, justifier, concevoir. Les verbes trop vagues comme savoir ou comprendre doivent souvent être précisés."
+                  >?</button>
+                </div>
                 <select id="verbSelect"></select>
-              </label>
-              <label>
-                Objet d'apprentissage
+              </div>
+              <div class="field full">
+                <div class="field-label-row">
+                  <label for="objectInput">Objet d'apprentissage</label>
+                  <button
+                    class="help-button"
+                    type="button"
+                    aria-label="Aide : objet d'apprentissage"
+                    data-help-title="Objet d'apprentissage"
+                    data-help-body="L'objet précise ce sur quoi porte l'action : une notion, une méthode, une situation, une production, une compétence ou un geste professionnel."
+                  >?</button>
+                </div>
                 <input id="objectInput" type="text" value="un dispositif d'évaluation critériée">
-              </label>
-              <label>
-                Contexte, condition ou critère
+              </div>
+              <div class="field full">
+                <div class="field-label-row">
+                  <label for="contextInput">Contexte, condition ou critère</label>
+                  <button
+                    class="help-button"
+                    type="button"
+                    aria-label="Aide : contexte, condition ou critère"
+                    data-help-title="Contexte, condition ou critère"
+                    data-help-body="Le contexte rend l'objectif plus évaluable : documents disponibles, niveau d'autonomie, type de cas, durée, critères de qualité ou contraintes professionnelles."
+                  >?</button>
+                </div>
                 <textarea id="contextInput" rows="3">à partir d'un objectif donné, avec au moins trois critères observables</textarea>
-              </label>
+              </div>
               <p id="generateur-aide" class="helper">
                 Structure utilisée : à la fin de la séquence, les étudiants seront en mesure de
                 <span>verbe + objet + contexte</span>.
@@ -92,7 +139,16 @@
         <div class="shell">
           <div class="section-heading">
             <p class="kicker">Fondamentaux</p>
-            <h2>Ce qu'est un objectif pédagogique</h2>
+            <div class="heading-with-help">
+              <h2>Ce qu'est un objectif pédagogique</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : objectif pédagogique"
+                data-help-title="Objectif pédagogique"
+                data-help-body="Un objectif pédagogique formule un résultat attendu du côté étudiant. Il ne décrit pas seulement ce que l'enseignant va faire, mais ce que l'étudiant pourra produire, expliquer, décider ou réaliser."
+              >?</button>
+            </div>
             <p>
               Un objectif pédagogique, ou objectif d'apprentissage, décrit ce que les étudiants devront
               savoir faire à l'issue d'une séance, d'un module, d'un semestre ou d'un programme.
@@ -189,7 +245,16 @@
         <div class="shell split-layout">
           <div class="section-heading sticky-heading">
             <p class="kicker">Méthode</p>
-            <h2>Rédiger un objectif robuste</h2>
+            <div class="heading-with-help">
+              <h2>Rédiger un objectif robuste</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : objectif robuste"
+                data-help-title="Objectif robuste"
+                data-help-body="Un objectif robuste passe le test des trois questions : l'étudiant comprend-il ce qui est attendu, l'enseignant peut-il l'entraîner, et l'évaluation peut-elle l'observer sans ambiguïté ?"
+              >?</button>
+            </div>
             <p>
               Les documents locaux convergent vers une logique simple : partir du point de vue de l'étudiant,
               choisir un verbe d'action observable, nommer le contenu ou la compétence, puis préciser le contexte
@@ -280,7 +345,16 @@
         <div class="shell">
           <div class="section-heading">
             <p class="kicker">Taxonomie</p>
-            <h2>La taxonomie de Bloom révisée</h2>
+            <div class="heading-with-help">
+              <h2>La taxonomie de Bloom révisée</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : taxonomie de Bloom"
+                data-help-title="Taxonomie de Bloom"
+                data-help-body="Bloom sert ici de repère de progression : mémoriser, comprendre, appliquer, analyser, évaluer, créer. Le plus important n'est pas l'étiquette, mais la cohérence entre le niveau visé, les activités et l'évaluation."
+              >?</button>
+            </div>
             <p>
               Bloom classe les objectifs cognitifs par niveaux de complexité. En conception pédagogique,
               elle aide à choisir des verbes d'action, à expliciter le niveau d'apprentissage visé et à éviter
@@ -328,7 +402,16 @@
         <div class="shell">
           <div class="section-heading light">
             <p class="kicker">Cohérence</p>
-            <h2>L'alignement pédagogique</h2>
+            <div class="heading-with-help">
+              <h2>L'alignement pédagogique</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : alignement pédagogique"
+                data-help-title="Alignement pédagogique"
+                data-help-body="L'alignement vérifie que l'on annonce, entraîne et évalue la même chose. Quand il est clair, les étudiants comprennent mieux pourquoi chaque activité existe."
+              >?</button>
+            </div>
             <p>
               L'alignement pédagogique est le principe de cohérence entre objectifs d'apprentissage,
               activités pédagogiques, contenus, outils et stratégies d'évaluation. Il peut servir à concevoir un
@@ -415,7 +498,16 @@
         <div class="shell">
           <div class="section-heading">
             <p class="kicker">Atelier</p>
-            <h2>Passer de l'objectif au dispositif</h2>
+            <div class="heading-with-help">
+              <h2>Passer de l'objectif au dispositif</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : passer de l'objectif au dispositif"
+                data-help-title="Objectif, activités, évaluation"
+                data-help-body="Une activité pertinente fait pratiquer la performance attendue. Une évaluation pertinente permet d'observer cette même performance avec des critères connus."
+              >?</button>
+            </div>
             <p>
               Une fois le niveau de Bloom choisi, l'enjeu est de proposer des activités qui entraînent vraiment
               la performance attendue, puis une évaluation qui observe cette performance avec des critères connus.
@@ -426,7 +518,16 @@
 
           <div class="evaluation-panel">
             <div>
-              <h3>Construire l'évaluation critériée</h3>
+              <div class="heading-with-help compact">
+                <h3>Construire l'évaluation critériée</h3>
+                <button
+                  class="help-button"
+                  type="button"
+                  aria-label="Aide : évaluation critériée"
+                  data-help-title="Évaluation critériée"
+                  data-help-body="Une évaluation critériée explicite les qualités attendues avant la production. Les critères décrivent la qualité, les indicateurs montrent comment on la reconnaît."
+                >?</button>
+              </div>
               <p>
                 Une grille critériée repose sur un triptyque simple : critère, indicateur, modalité
                 d'observation. Cette logique évite les jugements arbitraires et transforme l'évaluation
@@ -455,7 +556,16 @@
         <div class="shell audit-layout">
           <div class="section-heading">
             <p class="kicker">Diagnostic</p>
-            <h2>Checklist d'alignement</h2>
+            <div class="heading-with-help">
+              <h2>Checklist d'alignement</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : checklist d'alignement"
+                data-help-title="Checklist d'alignement"
+                data-help-body="La checklist sert à repérer les zones floues. Un score bas n'est pas un échec : c'est une invitation à clarifier les objectifs, l'entraînement ou l'évaluation."
+              >?</button>
+            </div>
             <p>
               Cochez les points déjà satisfaits. Le score n'est pas une note : c'est un détecteur de zones à clarifier
               avant de publier un syllabus, lancer une activité ou construire une évaluation.
@@ -478,7 +588,16 @@
         <div class="shell">
           <div class="section-heading">
             <p class="kicker">Communication</p>
-            <h2>Rendre l'alignement visible dans le syllabus</h2>
+            <div class="heading-with-help">
+              <h2>Rendre l'alignement visible dans le syllabus</h2>
+              <button
+                class="help-button"
+                type="button"
+                aria-label="Aide : syllabus"
+                data-help-title="Syllabus"
+                data-help-body="Le syllabus est plus utile quand il explique les liens : objectifs visés, activités prévues, productions attendues, modalités d'évaluation et critères de réussite."
+              >?</button>
+            </div>
             <p>
               Il est utile d'expliciter l'alignement aux étudiants. Le syllabus n'est pas seulement administratif :
               c'est un contrat de lisibilité qui relie objectifs, activités, calendrier, évaluations et ressources.
@@ -550,6 +669,15 @@
         <a href="#contenu">Retour en haut</a>
       </div>
     </footer>
+
+    <div class="context-help" id="contextHelp" hidden>
+      <section class="context-help-box" role="dialog" aria-labelledby="contextHelpTitle" aria-describedby="contextHelpBody">
+        <button class="context-help-close" type="button" aria-label="Fermer l'aide">×</button>
+        <p class="kicker">Aide contextuelle</p>
+        <h2 id="contextHelpTitle">Aide</h2>
+        <p id="contextHelpBody"></p>
+      </section>
+    </div>
 
     <script src="assets/app.js"></script>
   </body>
