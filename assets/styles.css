@@ -163,9 +163,7 @@ select {
   align-items: center;
   padding: 3rem 0 3.5rem;
   color: #fff;
-  background:
-    linear-gradient(90deg, rgba(24, 44, 50, 0.95), rgba(24, 44, 50, 0.72)),
-    url("../../jedi-main/PIX/jedi-openlab.png") center / cover no-repeat;
+  background: linear-gradient(120deg, #182c32 0%, #1f5f62 56%, #315f8d 100%);
 }
 
 .workbench-grid {
@@ -1027,44 +1025,6 @@ a:focus {
   margin: 0.38rem 0;
 }
 
-.name-band {
-  color: #fff;
-  background: var(--blue);
-}
-
-.names-layout {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.names-layout .kicker {
-  color: var(--amber-soft);
-}
-
-.names-layout p {
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.name-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.name-grid span {
-  display: grid;
-  min-height: 74px;
-  place-items: center;
-  padding: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.12);
-  text-align: center;
-  font-weight: 900;
-}
-
 .context-help {
   position: fixed;
   inset: 0;
@@ -1124,10 +1084,13 @@ a:focus {
   background: var(--coral);
 }
 
-.footer {
+.footer-shell {
   padding: 1.5rem 0;
-  color: #fff;
-  background: var(--ink);
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(22, 48, 66, 0.96);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .footer-grid {
@@ -1137,13 +1100,29 @@ a:focus {
   gap: 1rem;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.footer-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
 }
 
-.footer a {
+.footer-icon {
+  color: var(--amber-soft);
+  font-size: 0.95rem;
+}
+
+.footer-version {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.footer-shell strong,
+.footer-shell a {
   color: #fff;
 }
 
@@ -1160,8 +1139,7 @@ a:focus {
   .split-layout,
   .alignment-layout,
   .evaluation-panel,
-  .audit-layout,
-  .names-layout {
+  .audit-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1224,8 +1202,7 @@ a:focus {
   .failure-grid,
   .matrix-grid,
   .domain-grid,
-  .syllabus-grid,
-  .name-grid {
+  .syllabus-grid {
     grid-template-columns: 1fr;
   }
 
