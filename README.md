@@ -57,18 +57,6 @@ align-o-matic/
 
 L'application est statique. Elle peut être ouverte directement depuis `index.html`.
 
-Pour la tester via un serveur local depuis le dossier `JEDI-OpenLab` :
-
-```bash
-python3 -m http.server 48321 --bind 127.0.0.1
-```
-
-Puis ouvrir :
-
-```text
-http://127.0.0.1:48321/align-o-matic/
-```
-
 ## Maintenance
 
 - Modifier les contenus éditoriaux principaux dans `index.html`.
