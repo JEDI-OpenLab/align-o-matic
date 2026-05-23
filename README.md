@@ -57,6 +57,7 @@ align-o-matic/
 
 L'application est statique. Elle peut être ouverte directement depuis `index.html`.
 
+
 ## Maintenance
 
 - Modifier les contenus éditoriaux principaux dans `index.html`.

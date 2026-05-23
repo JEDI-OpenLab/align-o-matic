@@ -33,6 +33,7 @@ body {
   background: var(--paper);
   font-family: Inter, "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body::selection {
@@ -79,6 +80,7 @@ select {
 
 .shell {
   width: min(1180px, calc(100% - 2rem));
+  max-width: calc(100vw - 2rem);
   margin-inline: auto;
 }
 
@@ -171,6 +173,7 @@ select {
   grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.75fr);
   gap: 2rem;
   align-items: center;
+  min-width: 0;
 }
 
 .kicker {
@@ -272,6 +275,7 @@ h4 {
 
 .generator-panel {
   color: var(--ink);
+  min-width: 0;
   padding: 1.25rem;
 }
 
@@ -351,11 +355,13 @@ h4 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
+  min-width: 0;
 }
 
 .field {
   display: grid;
   gap: 0.35rem;
+  min-width: 0;
 }
 
 .field.full,
@@ -380,6 +386,7 @@ h4 {
 select,
 input,
 textarea {
+  min-width: 0;
   min-height: 44px;
   width: 100%;
   border: 1px solid #b7c0c2;
@@ -429,10 +436,12 @@ a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+  min-width: 0;
 }
 
 .button {
   display: inline-flex;
+  min-width: 0;
   min-height: 44px;
   align-items: center;
   justify-content: center;
@@ -549,6 +558,7 @@ a:focus {
 }
 
 .comparison-table-wrap {
+  max-width: 100%;
   overflow-x: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -557,7 +567,7 @@ a:focus {
 
 .comparison-table {
   width: 100%;
-  min-width: 840px;
+  min-width: min(840px, 100%);
   border-collapse: collapse;
 }
 
@@ -654,6 +664,7 @@ a:focus {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  min-width: 0;
 }
 
 .bloom-card {
@@ -770,6 +781,7 @@ a:focus {
   grid-template-columns: minmax(360px, 0.95fr) minmax(0, 0.8fr);
   gap: 2rem;
   align-items: center;
+  min-width: 0;
 }
 
 .triangle-diagram {
@@ -873,6 +885,7 @@ a:focus {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  min-width: 0;
 }
 
 .matrix-card {
@@ -1162,6 +1175,11 @@ a:focus {
     --header-height: 106px;
   }
 
+  .shell {
+    width: min(1180px, calc(100% - 1.25rem));
+    max-width: calc(100vw - 1.25rem);
+  }
+
   .header-grid {
     align-items: stretch;
     flex-direction: column;
@@ -1170,21 +1188,28 @@ a:focus {
 
   .top-nav {
     width: 100%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     overflow-x: visible;
   }
 
   .top-nav a {
-    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.55rem 0.45rem;
     text-align: center;
   }
 
   .workbench {
     min-height: 0;
+    padding: 2.25rem 0 2.75rem;
+  }
+
+  .generator-panel {
+    padding: 1rem;
   }
 
   h1 {
-    font-size: 2.45rem;
+    font-size: 2.35rem;
   }
 
   h2 {
@@ -1193,6 +1218,10 @@ a:focus {
 
   .lead {
     font-size: 1rem;
+  }
+
+  .objective-output {
+    font-size: 0.96rem;
   }
 
   .proof-strip,
@@ -1211,7 +1240,82 @@ a:focus {
   }
 
   .triangle-diagram {
-    min-height: 560px;
+    min-height: 640px;
+  }
+
+  .comparison-table-wrap {
+    overflow-x: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .comparison-table {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .comparison-table caption {
+    display: block;
+    padding: 0 0 0.75rem;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .comparison-table tr {
+    margin-bottom: 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    border-top: 0;
+  }
+
+  .comparison-table td {
+    padding: 0.75rem 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .comparison-table td:first-child {
+    border-top: 0;
+    color: #fff;
+    background: var(--ink);
+    font-weight: 900;
+  }
+
+  .comparison-table td:not(:first-child)::before {
+    content: "";
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--teal);
+    font-size: 0.76rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .comparison-table td:nth-child(2)::before {
+    content: "Question";
+  }
+
+  .comparison-table td:nth-child(3)::before {
+    content: "Exemple";
+  }
+
+  .comparison-table td:nth-child(4)::before {
+    content: "Risque";
   }
 
   .triangle-line {
@@ -1231,16 +1335,16 @@ a:focus {
   }
 
   .triangle-center {
-    top: 174px;
+    top: 184px;
   }
 
   .node-left {
-    top: 318px;
+    top: 340px;
     bottom: auto;
   }
 
   .node-right {
-    top: 438px;
+    top: 496px;
     bottom: auto;
   }
 
