@@ -67,9 +67,7 @@ L'application est statique. Elle peut être ouverte directement depuis `index.ht
 
 ## Licence
 
-Le code et les contenus pédagogiques propres à `align-o-matic` sont placés sous licence CC0 1.0 Universal, avec l'identifiant SPDX `CC0-1.0`.
-
-Cela signifie que l'application peut être copiée, modifiée, adaptée, partagée et réutilisée, y compris dans un cadre commercial, sans demander d'autorisation.
+Align-o-matic est une ressource éducative libre (REL) au sens de la Recommandation UNESCO de 2019. Sauf mention contraire, les contenus originaux sont placés sous licence Creative Commons Attribution 4.0 International — CC BY 4.0.
 
 Voir [LICENSE.md](LICENSE.md).
 

@@ -1,13 +1,11 @@
-# CC0 1.0 Universal
+# Licence
 
-SPDX-License-Identifier: CC0-1.0
+Ressource éducative libre (REL) au sens de la Recommandation UNESCO de 2019.
 
-To the extent possible under law, the authors dedicate this work to the public domain by waiving all copyright and related rights worldwide.
+Sauf mention contraire, les contenus originaux sont placés sous licence Creative Commons Attribution 4.0 International — CC BY 4.0.
 
-You can copy, modify, distribute and perform this work, even for commercial purposes, without asking permission.
+Les contenus tiers conservent leurs droits et licences propres.
 
-Full legal text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Voir le site principal de JEDI-OpenLab pour plus d'informations : https://jedi-openlab.github.io/jedi/
 
-Human-readable summary: https://creativecommons.org/publicdomain/zero/1.0/
-
-Unless otherwise stated, this applies to the source code and educational content in this `align-o-matic` directory. Assets referenced from outside this directory may be governed by their own license.
+Texte officiel de la licence CC BY 4.0 : https://creativecommons.org/licenses/by/4.0/deed.fr
