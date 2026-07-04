@@ -67,7 +67,7 @@ L'application est statique. Elle peut être ouverte directement depuis `index.ht
 
 ## Licence
 
-Align-o-matic est une ressource éducative libre (REL) au sens de la Recommandation UNESCO de 2019. Sauf mention contraire, les contenus originaux sont placés sous licence Creative Commons Attribution 4.0 International — CC BY 4.0.
+Align-o-matic est une ressource éducative libre (REL) au sens de la Recommandation UNESCO de 2019. Sauf mention contraire, les contenus originaux sont placés sous licence Creative Commons Attribution 4.0 International, CC BY 4.0.
 
 Voir [LICENSE.md](LICENSE.md).
 

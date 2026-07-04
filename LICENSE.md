@@ -2,7 +2,7 @@
 
 Ressource éducative libre (REL) au sens de la Recommandation UNESCO de 2019.
 
-Sauf mention contraire, les contenus originaux sont placés sous licence Creative Commons Attribution 4.0 International — CC BY 4.0.
+Sauf mention contraire, les contenus originaux sont placés sous licence Creative Commons Attribution 4.0 International, CC BY 4.0.
 
 Les contenus tiers conservent leurs droits et licences propres.
 
